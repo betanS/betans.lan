@@ -46,6 +46,75 @@ class Usuario
 
     }
 
+  /*  static function modi(){
+        $boton_enviar = "<button type=\"submit\" class=\"btn btn-primary\">". Idioma::lit('enviar')."</button>";
+        $literal_error_nick = '';
+        $errores = False;
+        if(Campo::val('paso'))
+        {
+            if(empty(Campo::val('nick')))
+            {
+                $literal_error_nick = ' <span class="error">'. Idioma::lit('valor_obligatorio') .'</span>';
+                $style_error_nick = 'error';
+                $errores = True;
+            }
+
+            if(empty(Campo::val('password')))
+            {
+                $literal_error_password = ' <span class="error">'. Idioma::lit('valor_obligatorio') .'</span>';
+                $style_error_password = 'error';
+                $errores = True;
+            }
+
+            if(empty(Campo::val('nombre')))
+            {
+                $literal_error_nombre = ' <span class="error">'. Idioma::lit('valor_obligatorio') .'</span>';
+                $style_error_nombre = 'error';
+                $errores = True;
+            }
+            if(empty(Campo::val('apellidos')))
+            {
+                $literal_error_apellidos = ' <span class="error">'. Idioma::lit('valor_obligatorio') .'</span>';
+                $style_error_apellidos = 'error';
+                $errores = True;
+            }
+
+            if(!preg_match(EREG_VALIDACION_EMAIL, Campo::val('email')))
+            {
+                $literal_error_email = ' <span class="error">'. Idioma::lit('valor_obligatorio') .'</span>';
+                $style_error_email = 'error';
+                $errores = True;
+            }
+
+
+            if(!$errores)
+            {
+                $query = new Query("
+                    INSERT INTO usuarios
+                    (
+                         nick        
+                        ,nombre      
+                        ,apellidos   
+                        ,email       
+                        ,password    
+                    )
+                    VALUES
+                    (
+                         '". Campo::val('nick')      ."'
+                        ,'". Campo::val('nombre')    ."'
+                        ,'". Campo::val('apellidos') ."'
+                        ,'". Campo::val('email')     ."'
+                        ,'". Campo::val('password')  ."'
+                    );
+                
+                ");
+                $mensaje_exito = '<p class="centrado alert alert-success" >' . Idioma::lit('operacion_exito') .  '</p>';
+
+                $disabled =" disabled=\"disabled\" ";
+                $boton_enviar = '';
+            }
+    }*/
+
 
     static function alta()
     {
