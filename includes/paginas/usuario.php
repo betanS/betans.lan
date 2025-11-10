@@ -19,6 +19,8 @@ class Usuario
                 $contenido = self::modi();
             break;
             case 'baja':
+                self::baja();
+                $contenido = self::listado();
             break;
             case 'alta':
                 $contenido = self::alta();
@@ -169,6 +171,23 @@ class Usuario
         self::sincro_form_bbdd($registro);
 
         return self::formulario('',[],''," disabled=\"disabled\" ");
+    }
+
+    static function baja()
+    {
+        /*if(Campo::val('fecha_baja') != '9999/12/31')
+        {
+            $query = new Query("
+                DELETE FROM usuarios
+                WHERE  id = '". Campo::val('id') ."'
+            ");
+        }else{*/
+            $query = new Query("
+                UPDATE usuarios
+                SET    fecha_baja = now()
+                WHERE  id = '". Campo::val('id') ."'
+            ");
+        /*}*/
     }
 
     static function modi()
