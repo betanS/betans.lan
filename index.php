@@ -15,9 +15,6 @@
     $usuario->insertar($datos);
 
 
-
-    exit;
-
     echo Template::header('Biblioteca');
     echo Template::nav();
 
