@@ -8,15 +8,15 @@
         private string $host     = '127.0.0.1';
         private string $usuario  = 'appuser';
         private string $password = '1234';
-        private string $baseDatos = 'Usuarios';
-
+        public  static string $baseDatos = 'Usuarios';
+        
         private function __construct()
         {
             $this->conexion = new mysqli(
                  $this->host
                 ,$this->usuario
                 ,$this->password
-                ,$this->baseDatos
+                ,self::$baseDatos
             );
 
             if($this->conexion->connect_error){
